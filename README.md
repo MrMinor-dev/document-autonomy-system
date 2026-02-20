@@ -14,6 +14,15 @@ The standard answer — "just keep docs updated" — misses the structural issue
 
 ---
 
+## Repository Contents
+
+| File | What It Is |
+|------|------------|
+| [examples/9-gate-scorecard.md](examples/9-gate-scorecard.md) | The full 9-gate scorecard with pass/fail criteria, scoring reference, and usage instructions — apply it to any document |
+| [examples/optimization-example.md](examples/optimization-example.md) | A real 45→88 transformation: before/after with a change table showing exactly which gates failed and why |
+
+---
+
 ## Architecture
 
 The system has three layers: standards, registry, and validation.
@@ -80,6 +89,16 @@ The second insight: **cascade dependencies are the missing layer in most doc sys
 - **Consistent scoring across document sizes** — small test doc and 14x-larger production doc scored identically, validating the structural approach
 - **`doc-management-skill v2.0`** packages this as a reusable capability with agentic execution standards
 - **Applied since October 2024** — every document in the MRMINOR knowledge base conforms to these standards
+
+---
+
+## Why It Matters
+
+Every large-scale system has a knowledge management problem — especially when multiple agents or teams are operating in parallel. SSOT discipline, cascade rules, and structured validation aren't unique to AI. They're the same patterns behind configuration management, runbook maintenance, and incident playbook design.
+
+The difference here is that when an AI agent acts on stale documentation, the failure is immediate and visible. If the schema doc is wrong, the database operation fails. If the skill file is outdated, the agent executes the wrong behavior. That feedback loop is what keeps the docs actually right — and it's the same forcing function that makes runbooks worth maintaining in any high-stakes operational environment.
+
+The 9-gate system is directly applicable to any documentation program that needs to be machine-readable, consistently structured, and auditable without reading every word. Security policy libraries. Compliance frameworks. Engineering runbooks. Any corpus where "is this current and trustworthy?" needs to be answerable in under two minutes.
 
 ---
 
